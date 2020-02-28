@@ -1,10 +1,10 @@
 window.addEventListener("load", () => {
-  let long;
-  let lat;
-  let tempDescription = document.querySelector(".temperature-description");
-  let tempDegree = document.querySelector(".temperature-degree");
-  let locationTimezone = document.querySelector(".location-timezone");
-  let degSection = document.querySelector(".degree-section");
+  var long;
+  var lat;
+  var tempDescription = document.querySelector(".temperature-description");
+  var tempDegree = document.querySelector(".temperature-degree");
+  var locationTimezone = document.querySelector(".location-timezone");
+  var degSection = document.querySelector(".degree-section");
   const degSpan = document.querySelector(".degree-section span");
 
   if (navigator.geolocation) {
@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
           locationTimezone.textContent = final_data.timezone;
 
           //Changing the number to Celcius
-          let celcius = (temperature - 32) * (5 / 9);
+          var celcius = (temperature - 32) * (5 / 9);
 
           // Set the Icon
           setIcons(icon, document.querySelector(".icon"));
